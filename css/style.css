@@ -1,3 +1,6 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
 @font-face {
     font-family: 'MasonChronicles';
     src: url('../fonts/MasonChronicles.woff') format('woff'),
@@ -25,6 +28,7 @@ body {
     width: 95%;
     max-width: 1140px;
     margin: auto;
+    overflow: hidden;
 }
 
 .header {
@@ -58,12 +62,17 @@ body {
     line-height: 16px;
     margin-bottom: 16px;
     display: block;
+    animation-delay: 0.1s;
 }
 
 .rating {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
+    animation-delay: 0.3s;
+}
+.rating-stars {
+    display: flex;
 }
 
 .rating-number {
@@ -77,6 +86,7 @@ body {
     line-height: 89px;
     font-family: 'MasonChronicles', serif;
     margin-bottom: 10px;
+    animation-delay: 0.5s;
 }
 
 .main-description {
@@ -84,21 +94,35 @@ body {
     font-size: 14px;
     line-height: 150%;
     margin-bottom: 40px;
+    animation-delay: 0.7s;
 }
-
-.button {
-    background: #9D2929;
-    border-radius: 8px;
-    color: #FFFFFF;
-    border: none;
-    padding: 22px 72px;
-}
-
 .main-content {
     display: flex;
     align-items: center;
     margin-bottom: 85px;
 }
+
+.button {
+    display: inline-block;
+    background: #9D2929;
+    border-radius: 8px;
+    color: #FFFFFF;
+    border: none;
+    padding: 22px 72px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: none;
+    animation-delay: 1s;
+}
+.button:active, .button:focus {
+    color: #fff;
+    text-decoration: none;
+    outline:0 none !important;
+}
+
+
+
 
    
 .play {
@@ -109,6 +133,9 @@ body {
     border: none;
     position: relative;
     margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .play-img {
@@ -126,6 +153,7 @@ body {
     border-radius: 50%;
     left: -16px;
     top: -16px;
+    animation: pulse 0.5s ease-in-out 2s infinite ;
 }
 
   
@@ -281,10 +309,13 @@ body {
         display: block;
         margin-bottom: 8px;
     }
-
+    .footer-link {
+        margin-left: 20px;
+    }
     .footer-link:first-child {
         margin-left: 0;
     }
+    
 }
 
 @media(max-width: 540px) {
@@ -297,6 +328,7 @@ body {
         height: 2px;
         background-color: #fff;
         border: none;
+        cursor: pointer;
 
     }
 
@@ -350,6 +382,8 @@ body {
         background-color: #9D2929;
         width: 250px;
         padding-bottom: 40px;
+        transition: opacity 0.5s;
+        border-bottom-left-radius: 80px;
     }
 
     .header-active {
@@ -396,5 +430,9 @@ body {
 
     .series {
         width: 80%;
+    }
+    .container {
+        max-width: 85%;
+        margin: auto;
     }
 }

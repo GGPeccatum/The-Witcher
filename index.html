@@ -9,6 +9,8 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -20,9 +22,9 @@
                 <img src="img/logo.png" alt="Логотип Ведьмак" class="logo">
 
                 <nav class="menu-list">
-                    <a href="#" class="menu-link">Описание</a>
-                    <a href="#" class="menu-link">Трейлер</a>
-                    <a href="#" class="menu-link">Отзывы</a>
+                    <a href="abode.html" class="menu-link">Описание</a>
+                    <a href="https://www.youtube.com/watch?v=GauLSpDzO1M" class="menu-link">Трейлер</a>
+                    <a href="https://www.imdb.com/title/tt5180504/reviews?ref_=tt_ov_rt" class="menu-link">Отзывы</a>
                 </nav>
 
 
@@ -52,9 +54,9 @@
         <div class="container">
             <div class="main-content">
                 <div class="content">
-                    <span class="genre">2019, фэнтези</span>
+                    <span class="genre animated fadeInRight">2019, фэнтези</span>
 
-                    <div class="rating">
+                    <div class="rating animated fadeInRight">
                         <div class="rating-stars">
                             <img src="img/star.svg" alt="star" class="star">
                             <img src="img/star.svg" alt="star" class="star">
@@ -72,25 +74,24 @@
                     <!-- /.rating -->
 
 
-                    <h1 class="main-title">Ведьмак</h1>
+                    <h1 class="main-title animated fadeInRight">Ведьмак</h1>
 
-                    <p class="main-description">
+                    <p class="main-description animated fadeInRight">
                         Ведьмак Геральт, мутант и убийца чудовищ, на своей верной лошади по кличке Плотва путешествует
                         по Континенту. За тугой мешочек чеканных монет этот мужчина избавит вас от всякой настырной
                         нечисти — хоть от чудищ болотных, оборотней и даже заколдованных принцесс.
                     </p>
                     
-                    <form action="https://www.netflix.com/kg/title/80189685" target="_self">
-                    <button class="button" >Смотреть онлайн</button></form>
+                    
+                    <a data-fancybox href="https://www.youtube.com/watch?v=GauLSpDzO1M&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0" class="button animated fadeInRight">Смотреть трейлер</a>
 
 
                       <!-- /.content -->
                 </div>  
                         
-                        <button class="play">
-                        <a href="https://www.youtube.com/embed/ndl1W4ltcmg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                        <img src="img/play.svg" alt="play" class="play-img"></a>
-                        </button>
+                <a data-fancybox href="https://www.youtube.com/watch?v=GauLSpDzO1M" class="play ">
+                    <img src="img/play.svg" alt="play" class="play-img">
+                </a> 
 
                         <!-- /.play -->
                         
@@ -184,7 +185,8 @@
         </div>
         <!-- /.container -->
     </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
     <script src="js/swiper.min.js"></script>
     <script src="js/main.js"></script>
 
